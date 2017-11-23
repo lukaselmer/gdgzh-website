@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "gdgzh-website-master",
+    "master": "gdgzh-website-master",
+    "development": "gdgzh-website-development"
+  }
+}
