@@ -1,3 +1,5 @@
+[![master](https://travis-ci.org/lukaselmer/gdgzh-website.svg?branch=master)](https://travis-ci.org/lukaselmer/gdgzh-website)
+
 # GdgzhWebsite
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.4.
@@ -9,8 +11,9 @@ reload if you change any of the source files.
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng
-generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `ng generate component component-name` to generate a new component.
+
+You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
