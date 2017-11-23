@@ -14,9 +14,9 @@ cache:
 # before_script: greenkeeper-lockfile-update
 script: npm run ci
 # after_script: greenkeeper-lockfile-upload
-# env:
-#   global:
-#   - secure: TODO
+env:
+  global:
+    secure: "nPbST7sAYWuqbqmk0eECUv595EHUJTPRygrKt57pAwlXYidZsyYTgW1phcrXY2ByVVNsCkVusMK0O/iIgVMk1xSKERFjlW5ghA3oD++lxEeNxR/JTwIrRJID3RIyo7DTPVu0mEbB9AmWyJMUJU1ZL4P7qeXOIlzzzfJ+p3Jw/YkKffjGaA9c97/onBU0tmr0RZPeQy2rC6NQYDnpjjuSTj54eIHzpoXyl1ngTuY15pdyPPQPD/Jab6nqbhv/nr2zQtONOEbA+BODc0CfCxRTeOdpZ+n9j5WzgqELiP5u7R9y5ZW1An47kHCXGQqTmrSr2zR7Gg0boebjfZwwtfGkJDFeJR9U2oxsUPMFZjkNzQaZyOHQc36vSbhedeLyc/WgkI6skD9x9qb3b53Jh1pAryLpCIDwoo+CW51E7U5Ak4JzgYBUFqSAe57fw6nexazEvcWeR8jwBUFBXjt5WYBG/Gi4RdCB7IvYzzLP7WL1btf0mNDgrRdu9erqpn6p3h66XIFqJU06CiUYIDZOTu73euj4vmPs93AwtZhuCaKI8diEldKt9Fg7pgKTHeKAZZyfJqkwd6tp2FizsnplTP7PoIqEaiBWTVD9INc3PanvHhqJYSl47lVjiexMcZPLD2ZeLSrkeYqMI8v6mY3+NOW2SLaG3Fa+w6C0idKfhBSdan8="
 #   - secure: TODO
 # after_success:
 # - npm install -g codeclimate-test-reporter
