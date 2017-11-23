@@ -28,11 +28,18 @@ script: npm run ci
 before_deploy:
 - npm run build-prod
 # - npm i -g webpack && cd functions && npm i && webpack && cd ..
-# deploy:
-#   skip_cleanup: true
-#   on:
-#     branch: master
-#   provider: firebase
-#   token:
-#     secure: TODO
-#   project: gdgzh-website
+deploy:
+  - provider: firebase
+    skip_cleanup: true
+    on:
+      branch: master
+    token:
+      secure: QPlKiOc9y2tIkH4FIDJSk7fsayF1WyCxy46CLeXCzyBDiyCpy3rr4JlRNjKKXs3w2xknG4gKKjOqEPjORZY94sNt7O2DmKmmJmF+0YDOskvWD2qsuwqxSA9g9Na2YAsGCh4wq+tns33kHZZ0j7FEcP5Lk8bXP5OdnI7e/63KmVNd7aAJYLOB0kWcGmwGq4jtt/pUts0vu91h18+BJukxm7trP7yk/GUwnt0TF5bIFfBRZAkwUk2Ke6FtAG8Qojm+hjUDiSkfKUj1qLyBMZjlCPHLrg4c53tIuAn2rTLpLKib0SJbuRkH4L8bSXtX83yzlEhugKxGgZ5e2uV/oVNI1LG0edCjDwLwJVIL5YQVCVRB/GTnkZHFjQxpEhbx/khDKCFmdASKFbssVWCA6Wy9Z9xVGqCEYaOUkC8WKFqaGkSIwby1bzvw10VNU2QNbfYMQHMu4wAxtMOl02IxapyThJlOXRmjeOdbV7twt0ts2FsxyVNj+Y0h1SbikBukzvnEZ3x7zlMCtYAT732fURNVBteMZ5lDV5BupH9oYQxUPdOGThP8kZeolJS282ohI38aPsd5oyjUKJrEAzbprtwAJoG8bnhgAUPwn+UdWBSsyjKX+6ZmNJK2h+PeDadfkR9RD4saq7+n0MF3dGEqUfn0HQajibUZC2SBY1CwRy1jf0w=
+    project: gdgzh-website-master
+  - provider: firebase
+    skip_cleanup: true
+    on:
+      branch: develop
+    token:
+      secure: QPlKiOc9y2tIkH4FIDJSk7fsayF1WyCxy46CLeXCzyBDiyCpy3rr4JlRNjKKXs3w2xknG4gKKjOqEPjORZY94sNt7O2DmKmmJmF+0YDOskvWD2qsuwqxSA9g9Na2YAsGCh4wq+tns33kHZZ0j7FEcP5Lk8bXP5OdnI7e/63KmVNd7aAJYLOB0kWcGmwGq4jtt/pUts0vu91h18+BJukxm7trP7yk/GUwnt0TF5bIFfBRZAkwUk2Ke6FtAG8Qojm+hjUDiSkfKUj1qLyBMZjlCPHLrg4c53tIuAn2rTLpLKib0SJbuRkH4L8bSXtX83yzlEhugKxGgZ5e2uV/oVNI1LG0edCjDwLwJVIL5YQVCVRB/GTnkZHFjQxpEhbx/khDKCFmdASKFbssVWCA6Wy9Z9xVGqCEYaOUkC8WKFqaGkSIwby1bzvw10VNU2QNbfYMQHMu4wAxtMOl02IxapyThJlOXRmjeOdbV7twt0ts2FsxyVNj+Y0h1SbikBukzvnEZ3x7zlMCtYAT732fURNVBteMZ5lDV5BupH9oYQxUPdOGThP8kZeolJS282ohI38aPsd5oyjUKJrEAzbprtwAJoG8bnhgAUPwn+UdWBSsyjKX+6ZmNJK2h+PeDadfkR9RD4saq7+n0MF3dGEqUfn0HQajibUZC2SBY1CwRy1jf0w=
+    project: gdgzh-website-develop
