@@ -3,35 +3,35 @@
 
 module.exports = function(config) {
   config.set({
-    basePath: "",
-    frameworks: ["jasmine", "@angular/cli"],
+    basePath: '',
+    frameworks: ['jasmine', '@angular/cli'],
     plugins: [
-      require("karma-jasmine"),
-      require("karma-chrome-launcher"),
-      require("karma-jasmine-html-reporter"),
-      require("karma-coverage-istanbul-reporter"),
-      require("@angular/cli/plugins/karma")
+      require('karma-jasmine'),
+      require('karma-chrome-launcher'),
+      require('karma-jasmine-html-reporter'),
+      require('karma-coverage-istanbul-reporter'),
+      require('@angular/cli/plugins/karma')
     ],
     client: {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
     coverageIstanbulReporter: {
-      reports: process.env.TRAVIS ? ["lcovonly"] : ["html", "lcovonly"],
+      reports: process.env.TRAVIS ? ['lcovonly'] : ['html', 'lcovonly'],
       fixWebpackSourcePaths: true
     },
     angularCli: {
-      environment: "dev"
+      environment: 'dev'
     },
-    reporters: ["progress", "kjhtml"],
+    reporters: ['progress', 'kjhtml'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: [process.env.TRAVIS ? "ChromeTravisCi" : "ChromeHeadless"],
+    browsers: [process.env.TRAVIS ? 'ChromeTravisCi' : 'ChromeHeadless'],
     customLaunchers: {
       ChromeTravisCi: {
-        base: "ChromeHeadless",
-        flags: ["--no-sandbox"]
+        base: 'ChromeHeadless',
+        flags: ['--no-sandbox']
       }
     },
     singleRun: false
