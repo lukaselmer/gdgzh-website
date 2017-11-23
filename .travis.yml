@@ -6,7 +6,8 @@ before_install:
 - export TZ=Europe/Zurich
 - export CHROME_BIN=google-chrome-stable
 - gem install mdl
-# - npm install -g @angular/cli greenkeeper-lockfile
+- npm install -g @angular/cli
+# greenkeeper-lockfile
 cache:
   directories:
   - node_modules
