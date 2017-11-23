@@ -1,0 +1,38 @@
+dist: trusty
+addons:
+  chrome: stable
+language: node_js
+before_install:
+- export TZ=Europe/Zurich
+- export CHROME_BIN=google-chrome-stable
+- gem install mdl
+# - npm install -g @angular/cli greenkeeper-lockfile
+cache:
+  directories:
+  - node_modules
+# before_script: greenkeeper-lockfile-update
+script: npm run ci
+# after_script: greenkeeper-lockfile-upload
+# env:
+#   global:
+#   - secure: TODO
+#   - secure: TODO
+# after_success:
+# - npm install -g codeclimate-test-reporter
+# - CODECLIMATE_REPO_TOKEN=TODO codeclimate-test-reporter < coverage/lcov.info
+# - CODECLIMATE_API_HOST=https://codebeat.co/webhooks/code_coverage CODECLIMATE_REPO_TOKEN=TODO codeclimate-test-reporter < coverage/lcov.info
+# - npm install -g codacy-coverage
+# - cat coverage/lcov.info | codacy-coverage
+# - npm install -g codecov
+# - codecov
+before_deploy:
+- npm run build-prod
+# - npm i -g webpack && cd functions && npm i && webpack && cd ..
+# deploy:
+#   skip_cleanup: true
+#   on:
+#     branch: master
+#   provider: firebase
+#   token:
+#     secure: TODO
+#   project: gdgzh-website
