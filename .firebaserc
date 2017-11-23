@@ -2,7 +2,7 @@
   "projects": {
     "default": "gdg-website-master",
     "master": "gdg-website-master",
-    "develop": "gdg-website-develop"
+    "develop": "gdg-website-develop",
     "development": "gdg-website-development"
   }
 }
