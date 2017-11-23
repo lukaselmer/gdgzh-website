@@ -1,8 +1,8 @@
 {
   "projects": {
-    "default": "gdgzh-website-master",
-    "master": "gdgzh-website-master",
-    "develop": "gdgzh-website-develop"
-    "development": "gdgzh-website-development"
+    "default": "gdg-website-master",
+    "master": "gdg-website-master",
+    "develop": "gdg-website-develop"
+    "development": "gdg-website-development"
   }
 }
