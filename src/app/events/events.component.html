@@ -1,3 +1,9 @@
-<p>
-  events works!
-</p>
+<h1>Events</h1>
+
+<ul>
+  <li *ngFor="let event of events | async">
+    <h2>{{event.name}}</h2>
+    <p>{{event.description}}</p>
+    <p>{{event.hostedAt}}</p>
+  </li>
+</ul>
