@@ -27,7 +27,7 @@ env:
 # - npm install -g codecov
 # - codecov
 before_deploy:
-- [[ $TRAVIS_BRANCH == 'develop' ]] && cp src/environments/environment.develop.ts src/environments/environment.prod.ts && echo 'Using environment.develop.ts'
+- bin/travis-before-deploy
 - npm run build-prod
 # - npm i -g webpack && cd functions && npm i && webpack && cd ..
 deploy:
