@@ -2,20 +2,20 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { AngularFirestore } from 'angularfire2/firestore';
 import 'rxjs/add/observable/of';
 import { Observable } from 'rxjs/Observable';
+import { MeetupEvent } from '../../../functions/src/meetupApi';
 import { EventsComponent } from './events.component';
-import { Meetup } from './meetup';
 
 describe('EventsComponent', () => {
   const firestoreMock = {
     collection: () => {
       return {
         valueChanges: () => {
-          return Observable.of<Meetup[]>([
+          return Observable.of<MeetupEvent[]>([
             {
               name: 'Hello GDG Zurich',
               description: 'Welcome...',
               hostedAt: '2000'
-            }
+            } as any
           ]);
         }
       };

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
-import { Meetup } from './meetup';
+import { MeetupEvent } from '../../../functions/src/meetupApi';
 
 @Component({
   selector: 'gw-events',
@@ -9,10 +9,13 @@ import { Meetup } from './meetup';
   styleUrls: ['./events.component.scss']
 })
 export class EventsComponent implements OnInit {
-  events: Observable<Meetup[]>;
+  events: Observable<MeetupEvent[]>;
 
-  constructor(db: AngularFirestore) {
-    this.events = db.collection<Meetup>('events').valueChanges();
+  constructor(store: AngularFirestore) {
+    this.events = store
+      .collection<MeetupEvent>('events')
+      .valueChanges()
+      .map(events => events.reverse());
   }
 
   ngOnInit() {}

@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { EventsComponent } from './events/events.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
+import { MaterialModule } from './material/material.module';
 import { NavComponent } from './nav/nav.component';
 
 @NgModule({
@@ -30,6 +31,7 @@ import { NavComponent } from './nav/nav.component';
     AngularFirestoreModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MaterialModule,
     environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : []
   ],
   providers: [],

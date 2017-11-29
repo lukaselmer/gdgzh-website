@@ -1,6 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'gw-theme';
 
-@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@include mat-core();
+
+@include angular-material-theme($gw-app-theme);
+
+// @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
 body {
   margin: 0;

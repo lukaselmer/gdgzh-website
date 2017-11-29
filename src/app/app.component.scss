@@ -1,4 +1,10 @@
+$nav-height: 57px;
+
 main {
   min-height: 500px;
-  padding-top: 47px;
+  padding-top: $nav-height;
+
+  @media screen {
+    padding: $nav-height 25px 30px 25px;
+  }
 }

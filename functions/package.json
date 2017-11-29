@@ -1,0 +1,26 @@
+{
+  "name": "gdgzh-website-functions",
+  "license": "MIT",
+  "version": "0.0.0",
+  "description": "GDG Website Cloud Functions",
+  "scripts": {
+    "serve": "firebase serve --only functions",
+    "shell": "firebase experimental:functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "dependencies": {
+    "firebase-admin": "~5.4.2",
+    "firebase-functions": "^0.7.3",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
+  },
+  "private": false,
+  "repository": "lukaselmer/gdgzh-website",
+  "devDependencies": {
+    "@types/request-promise": "^4.1.39",
+    "ts-loader": "^3.0.5",
+    "webpack-node-externals": "^1.6.0"
+  }
+}
