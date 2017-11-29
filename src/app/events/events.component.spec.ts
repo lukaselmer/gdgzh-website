@@ -3,6 +3,7 @@ import { AngularFirestore } from 'angularfire2/firestore';
 import 'rxjs/add/observable/of';
 import { Observable } from 'rxjs/Observable';
 import { MeetupEvent } from '../../../functions/src/meetupApi';
+import { MaterialModule } from '../material/material.module';
 import { EventsComponent } from './events.component';
 
 describe('EventsComponent', () => {
@@ -28,6 +29,7 @@ describe('EventsComponent', () => {
   beforeEach(
     async(() => {
       TestBed.configureTestingModule({
+        imports: [MaterialModule],
         declarations: [EventsComponent],
         providers: [
           {
@@ -47,9 +49,9 @@ describe('EventsComponent', () => {
 
   it('should render the events', () => {
     const element: HTMLElement = fixture.nativeElement;
-    const h2 = element.querySelector('h2');
-    if (!h2) throw new Error('h2 not found');
+    const title = element.querySelector('mat-card-title');
+    if (!title) throw new Error('mat-card-title not found');
 
-    expect(h2.innerText).toEqual('Hello GDG Zurich');
+    expect((title as any).innerText).toEqual('Hello GDG Zurich');
   });
 });
