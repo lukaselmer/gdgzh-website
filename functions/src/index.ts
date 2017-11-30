@@ -3,7 +3,6 @@ import * as functions from 'firebase-functions';
 import { fetchMeetupEvents } from './meetupApi';
 
 admin.initializeApp(functions.config().firebase as admin.AppOptions);
-// const db = admin.database();
 const store = admin.firestore();
 
 exports.refreshMeetupEvents = functions.https.onRequest(async (request, response) => {
@@ -20,7 +19,6 @@ exports.refreshMeetupEvents = functions.https.onRequest(async (request, response
     response.send({ success: `Successfully imported ${events.length} events` });
   } catch (ex) {
     console.error(ex);
-    const z: ReferenceError = ex;
     response.status(500).send({ name: ex.name, message: ex.message, stack: ex.stack });
   }
 });
