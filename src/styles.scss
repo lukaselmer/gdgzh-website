@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'gw-theme';
+
+@include mat-core();
+@include angular-material-theme($gw-app-theme);
+
+body {
+  margin: 0;
+}
