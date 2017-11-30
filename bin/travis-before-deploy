@@ -1,3 +1,8 @@
 #!/usr/bin/env bash
 
-[[ $TRAVIS_BRANCH == 'develop' ]] && cp src/environments/environment.develop.ts src/environments/environment.prod.ts && echo 'Using environment.develop.ts'
+if [ "$TRAVIS_BRANCH" = "develop" ]; then
+  cp src/environments/environment.develop.ts src/environments/environment.prod.ts
+  echo "Using environment.develop.ts"
+else
+  echo "Using environment.prod.ts"
+fi
