@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { AngularFirestore } from 'angularfire2/firestore';
 import 'rxjs/add/observable/of';
 import { Observable } from 'rxjs/Observable';
-import { MeetupEvent } from '../../../functions/src/meetupApi';
+import { MeetupEvent } from '../../../functions/src/meetupInterfaces';
 import { MaterialModule } from '../material/material.module';
 import { EventsComponent } from './events.component';
 
